@@ -1,0 +1,49 @@
+INSERT INTO department(department_id, field, department_head)
+VALUES 
+(1, 'Cardiology', 'Dr. Ishigami'),
+(2, 'Pediatrics', 'Dr. Amasawa'),
+(3, 'Orthopedics', 'Dr. Nanase'),
+(4, 'Emergency', 'Dr. Yagami'),
+(5, 'Neurology', 'Dr. Utomiya');
+
+INSERT INTO patient(patient_id, first_name, last_name, phone_no, age, gender)
+VALUES
+(1, 'Kikyo', 'Kushida', '09235643472', 18, 'F'),
+(2, 'Mio', 'Ibuki', '09537372921', 18, 'F'),
+(3, 'Suzune', 'Horikita', '09598885434', 18, 'F'),
+(4, 'Manabu', 'Horikita', '09629391236', 20, 'M'),
+(5, 'Miyabi', 'Nagumo', '09489067831', 19, 'M');
+
+INSERT INTO physician(physician_id, first_name, last_name, department_id)
+VALUES
+(1, 'Kakeru', 'Ryueen', 1),
+(2, 'Arisu', 'Sakayanagi', 2),
+(3, 'Hirata', 'Yosuke', 3),
+(4, 'Haruka', 'Hasebe', 4),
+(5, 'Tsubaki', 'Sakurako', 5),
+(6, 'Masayoshi', 'Hashimoto', 2),
+(7, 'Kohei', 'Katsuragi', 1);
+
+INSERT INTO room(room_id, room_number)
+VALUES
+(1, 1356),
+(2, 1738),
+(3, 1673),
+(4, 1524),
+(5, 1823);
+
+INSERT INTO admin(admin_id, patient_id, physician_id, room_id, date_and_time)
+VALUES
+(1, 1, 1, 1, '2026-02-23 09:51:46'),
+(2, 2, 2, 2, '2026-02-23 09:54:35'),
+(3, 3, 3, 3, '2026-02-23 09:56:58'),
+(4, 4, 4, 4, '2026-02-23 10:00:03'),
+(5, 5, 5, 5, '2026-02-23 10:02:12');
+
+INSERT INTO bill(bill_id, admin_id, date_and_time, medical_cost)
+VALUES
+(1, 1, '2026-02-26 19:42:12', 7500),
+(2, 2, '2026-02-28 03:37:31', 8300),
+(3, 3, '2026-02-24 23:59:57', 1800),
+(4, 4, '2026-03-01 15:17:35', 32000),
+(5, 5, '2026-03-05 09:26:02', 19500);
